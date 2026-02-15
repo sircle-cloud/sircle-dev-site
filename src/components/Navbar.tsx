@@ -216,13 +216,13 @@ export default function Navbar() {
             clipPath: "circle(0% at calc(100% - 40px) 32px)",
           }}
         >
-          {/* Close button - aligned with navbar */}
+          {/* Close button - top right, clearly visible */}
           <button
             onClick={closeMenu}
-            className="absolute top-[22px] right-6 z-10 w-10 h-10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+            className="absolute top-6 right-6 z-[70] w-12 h-12 flex items-center justify-center text-white hover:text-accent-warm transition-colors"
             aria-label="Sluiten"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
@@ -235,7 +235,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu content */}
-          <div className="relative h-full flex flex-col justify-center px-10 pb-24">
+          <div className="relative h-full flex flex-col justify-start pt-24 px-10 pb-12">
             {/* Nav links */}
             <div className="flex flex-col gap-2">
               {navLinks.map((link, i) => (
