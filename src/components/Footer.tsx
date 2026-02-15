@@ -38,7 +38,7 @@ export default function Footer() {
     <footer className="bg-primary text-white">
       {/* Newsletter section */}
       <div className="border-b border-white/10">
-        <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <a href="#hero" className="flex items-center gap-2 text-white font-heading text-xl font-semibold mb-2">
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       {/* Links */}
-      <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 py-12 md:py-16">
+      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo column */}
           <div className="col-span-2 md:col-span-1">
@@ -133,7 +133,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-white/40 text-xs">
             &copy; {new Date().getFullYear()} Sircle.dev — Onderdeel van SIRCLE holding. Alle rechten voorbehouden.
           </p>

@@ -102,7 +102,7 @@ export default function Pricing() {
       <div className="decoration-blob decoration-blob-warm absolute -bottom-32 right-1/4 w-[350px] h-[350px]" />
       <div className="absolute top-20 right-10 w-36 h-36 dot-pattern-light opacity-30" />
 
-      <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 relative z-10">
+      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 relative z-10">
         <div className="text-center mb-16 pricing-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Pricing
