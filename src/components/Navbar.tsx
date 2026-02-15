@@ -150,7 +150,7 @@ export default function Navbar() {
             : "bg-transparent py-5"
         }`}
       >
-        <div className="mx-auto max-w-[1200px] px-6 flex items-center justify-between">
+        <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 flex items-center justify-between">
           {/* Logo */}
           <a
             href="#hero"

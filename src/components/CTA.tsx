@@ -33,7 +33,7 @@ export default function CTA() {
 
   return (
     <section id="contact" ref={sectionRef} className="py-24 md:py-32 bg-cream">
-      <div className="mx-auto max-w-[1200px] px-6">
+      <div className="mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6">
         <div className="cta-content relative rounded-3xl overflow-hidden">
           {/* Background image */}
           <div className="absolute inset-0">

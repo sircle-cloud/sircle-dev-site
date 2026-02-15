@@ -66,7 +66,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative h-screen min-h-[700px] flex items-center overflow-hidden"
     >
       {/* Background */}
       <div
@@ -104,7 +104,7 @@ export default function Hero() {
       <div className="absolute top-[60%] right-[25%] w-2 h-2 rounded-full bg-accent-warm/40 animate-pulse" style={{ animationDelay: "1s" }} />
       <div className="absolute top-[40%] left-[5%] w-4 h-4 rounded-full bg-soft-green/20 animate-pulse" style={{ animationDelay: "0.5s" }} />
 
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6 py-32 md:py-40 w-full">
+      <div className="relative z-10 mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6 py-32 md:py-40 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text content */}
           <div>

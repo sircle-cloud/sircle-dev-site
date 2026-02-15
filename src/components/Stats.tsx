@@ -126,7 +126,7 @@ export default function Stats() {
       <div className="absolute bottom-10 right-[15%] w-32 h-32 rounded-full border border-white/5" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.03]" />
 
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6">
+      <div className="relative z-10 mx-auto max-w-[90%] xl:max-w-[85%] 2xl:max-w-[1600px] px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, i) => (
             <div key={i} className="text-center group">
