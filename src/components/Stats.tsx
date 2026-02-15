@@ -135,7 +135,7 @@ export default function Stats() {
                 {stat.icon}
               </div>
 
-              <div className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-3">
+              <div className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 whitespace-nowrap">
                 <span ref={(el) => { countRefs.current[i] = el; }}>
                   {stat.prefix}0
                 </span>
