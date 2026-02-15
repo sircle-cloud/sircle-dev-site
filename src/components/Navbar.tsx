@@ -216,10 +216,10 @@ export default function Navbar() {
             clipPath: "circle(0% at calc(100% - 40px) 32px)",
           }}
         >
-          {/* Close button */}
+          {/* Close button - aligned with navbar */}
           <button
             onClick={closeMenu}
-            className="absolute top-5 right-6 z-10 w-10 h-10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+            className="absolute top-[22px] right-6 z-10 w-10 h-10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
             aria-label="Sluiten"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
