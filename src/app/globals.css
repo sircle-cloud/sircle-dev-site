@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #142828;
+  --color-primary-light: #1a3636;
+  --color-accent-blue: #0054f9;
+  --color-accent-orange: #eb5729;
+  --color-accent-warm: #ffa710;
+  --color-light-bg: #f3f4f7;
+  --color-light-bg-alt: #eeefef;
+  --color-dark-text: #131313;
+  --color-gray-text: #565656;
+  --color-border: #e6e6e6;
+  --color-soft-green: #cdeed3;
+
+  --font-heading: "Bricolage Grotesque", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-accent-blue);
+  color: white;
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+/* Animation helpers */
+.gsap-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.gsap-fade-in {
+  opacity: 0;
+}
+
+.gsap-scale-in {
+  opacity: 0;
+  transform: scale(0.95);
+}
