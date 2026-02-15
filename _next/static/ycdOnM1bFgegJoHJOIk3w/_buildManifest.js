@@ -1,7 +1,12 @@
 self.__BUILD_MANIFEST = {
   "__rewrites": {
     "afterFiles": [],
-    "beforeFiles": [],
+    "beforeFiles": [
+      {
+        "source": "/sircle-dev-site//_next/:path+",
+        "destination": "/sircle-dev-site/_next/:path+"
+      }
+    ],
     "fallback": []
   },
   "sortedPages": [
