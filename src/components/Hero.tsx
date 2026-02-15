@@ -242,8 +242,13 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom gradient fade to cream */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent" />
+      {/* Bottom gradient fade to cream - extended for smooth transition */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-[300px]"
+        style={{
+          background: "linear-gradient(to top, var(--color-cream) 0%, var(--color-cream) 5%, rgba(250,249,246,0.7) 30%, rgba(250,249,246,0.3) 60%, transparent 100%)",
+        }}
+      />
     </section>
   );
 }
