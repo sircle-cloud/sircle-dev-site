@@ -17,6 +17,8 @@ const benefits = [
     description:
       "Bespaar fors ten opzichte van lokale hires, zonder in te leveren op kwaliteit. Onze developers leveren vergelijkbare output.",
     color: "bg-soft-green/50 text-primary",
+    borderColor: "hover:border-t-soft-green",
+    image: null,
   },
   {
     icon: (
@@ -29,6 +31,8 @@ const benefits = [
     description:
       "Geen maandenlange wervingsprocessen. Binnen 2 weken heb je een dedicated developer in je team.",
     color: "bg-accent-blue/10 text-accent-blue",
+    borderColor: "hover:border-t-accent-blue",
+    image: null,
   },
   {
     icon: (
@@ -40,6 +44,8 @@ const benefits = [
     description:
       "Geen lange contracten of lock-in. Schaal op of af wanneer je wilt — volledige flexibiliteit.",
     color: "bg-accent-orange/10 text-accent-orange",
+    borderColor: "hover:border-t-accent-orange",
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&q=80",
   },
   {
     icon: (
@@ -51,6 +57,8 @@ const benefits = [
     description:
       "Jouw aanspreekpunt is altijd Nederlands. Wij overbruggen taal, cultuur en timezone — jij focust op bouwen.",
     color: "bg-accent-warm/15 text-accent-warm",
+    borderColor: "hover:border-t-accent-warm",
+    image: null,
   },
   {
     icon: (
@@ -63,6 +71,8 @@ const benefits = [
     description:
       "Dubbel selectieproces: TechNext pre-screent, Sircle.dev doet de final check. Alleen de beste developers.",
     color: "bg-soft-green/50 text-primary",
+    borderColor: "hover:border-t-soft-green",
+    image: null,
   },
   {
     icon: (
@@ -76,6 +86,8 @@ const benefits = [
     description:
       "Onze developers werken met AI-tools als Claude Code en Copilot — 2-3x hogere productiviteit.",
     color: "bg-accent-blue/10 text-accent-blue",
+    borderColor: "hover:border-t-accent-blue",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&q=80",
   },
 ];
 
@@ -87,7 +99,7 @@ export default function Benefits() {
       // Heading animation
       gsap.fromTo(
         ".benefits-heading",
-        { opacity: 0, y: 40 },
+        { opacity: 0.3, y: 40 },
         {
           opacity: 1,
           y: 0,
@@ -104,7 +116,7 @@ export default function Benefits() {
       gsap.utils.toArray<HTMLElement>(".benefit-card").forEach((card, i) => {
         gsap.fromTo(
           card,
-          { opacity: 0, y: 50, scale: 0.97 },
+          { opacity: 0.3, y: 50, scale: 0.97 },
           {
             opacity: 1,
             y: 0,
@@ -125,14 +137,24 @@ export default function Benefits() {
   }, []);
 
   return (
-    <section id="benefits" ref={sectionRef} className="py-24 md:py-32 bg-light-bg">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section id="benefits" ref={sectionRef} className="py-24 md:py-32 bg-light-bg relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="decoration-blob decoration-blob-blue absolute top-20 -left-40 w-[400px] h-[400px]" />
+      <div className="decoration-blob decoration-blob-warm absolute -bottom-20 -right-20 w-[350px] h-[350px]" />
+      <div className="absolute bottom-10 left-10 w-32 h-32 dot-pattern opacity-30" />
+
+      <div className="mx-auto max-w-[1200px] px-6 relative z-10">
         <div className="text-center mb-16 benefits-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Waarom Sircle.dev
           </p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-dark-text leading-tight mb-4">
-            Voordelen die het verschil maken
+            Voordelen die het{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-accent-blue">verschil</span>
+              <span className="absolute bottom-1 left-0 right-0 h-2 bg-accent-blue/15 -skew-x-3 rounded" />
+            </span>{" "}
+            maken
           </h2>
           <p className="text-gray-text text-lg max-w-2xl mx-auto">
             Ontdek waarom steeds meer Nederlandse bedrijven kiezen voor Sircle.dev
@@ -144,19 +166,34 @@ export default function Benefits() {
           {benefits.map((benefit, i) => (
             <div
               key={i}
-              className="benefit-card group bg-white rounded-2xl p-7 transition-all hover:shadow-xl hover:-translate-y-1 cursor-default border border-border/50"
+              className="benefit-card group bg-white rounded-2xl overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1 cursor-default border border-border/50 hover:border-accent-blue/20 border-t-2 border-t-transparent"
             >
-              <div
-                className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110 ${benefit.color}`}
-              >
-                {benefit.icon}
+              {/* Optional image at top of card */}
+              {benefit.image && (
+                <div className="relative h-36 overflow-hidden">
+                  <img
+                    src={benefit.image}
+                    alt={benefit.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                </div>
+              )}
+
+              <div className="p-7">
+                <div
+                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110 ${benefit.color}`}
+                >
+                  {benefit.icon}
+                </div>
+                <h3 className="font-heading text-xl font-medium text-dark-text mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-text text-sm leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 className="font-heading text-xl font-medium text-dark-text mb-3">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-text text-sm leading-relaxed">
-                {benefit.description}
-              </p>
             </div>
           ))}
         </div>

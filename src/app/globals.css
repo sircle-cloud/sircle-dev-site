@@ -6,11 +6,12 @@
   --color-accent-blue: #0054f9;
   --color-accent-orange: #eb5729;
   --color-accent-warm: #ffa710;
-  --color-light-bg: #f3f4f7;
+  --color-light-bg: #f5f6f8;
   --color-light-bg-alt: #eeefef;
+  --color-cream: #faf9f6;
   --color-dark-text: #131313;
   --color-gray-text: #565656;
-  --color-border: #e6e6e6;
+  --color-border: #e5e7eb;
   --color-soft-green: #cdeed3;
 
   --font-heading: "Bricolage Grotesque", serif;
@@ -24,6 +25,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-dark-text);
+  background-color: var(--color-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,17 +53,75 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 4px;
 }
 
-/* Animation helpers */
+/* Dot grid pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.dot-pattern-light {
+  background-image: radial-gradient(circle, rgba(0, 84, 249, 0.08) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+/* Decorative blobs */
+.decoration-blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-blob-blue {
+  background: radial-gradient(circle, rgba(0,84,249,0.1) 0%, transparent 70%);
+}
+
+.decoration-blob-orange {
+  background: radial-gradient(circle, rgba(235,87,41,0.08) 0%, transparent 70%);
+}
+
+.decoration-blob-warm {
+  background: radial-gradient(circle, rgba(255,167,16,0.08) 0%, transparent 70%);
+}
+
+.decoration-blob-green {
+  background: radial-gradient(circle, rgba(205,238,211,0.3) 0%, transparent 70%);
+}
+
+/* Star rating */
+.star-rating {
+  color: #ffa710;
+}
+
+/* Accent underline for highlighted words */
+.accent-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--color-accent-blue);
+  opacity: 0.2;
+  border-radius: 3px;
+  transform: skewX(-3deg);
+}
+
+/* Animation helpers - start at 0.3 opacity so content is visible */
 .gsap-fade-up {
-  opacity: 0;
+  opacity: 0.3;
   transform: translateY(40px);
 }
 
 .gsap-fade-in {
-  opacity: 0;
+  opacity: 0.3;
 }
 
 .gsap-scale-in {
-  opacity: 0;
+  opacity: 0.3;
   transform: scale(0.95);
 }

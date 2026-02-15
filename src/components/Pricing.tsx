@@ -65,7 +65,7 @@ export default function Pricing() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".pricing-heading",
-        { opacity: 0, y: 40 },
+        { opacity: 0.3, y: 40 },
         {
           opacity: 1,
           y: 0,
@@ -78,7 +78,7 @@ export default function Pricing() {
       gsap.utils.toArray<HTMLElement>(".pricing-card").forEach((card, i) => {
         gsap.fromTo(
           card,
-          { opacity: 0, y: 60, scale: 0.95 },
+          { opacity: 0.3, y: 60, scale: 0.95 },
           {
             opacity: 1,
             y: 0,
@@ -96,14 +96,24 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-white">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section id="pricing" ref={sectionRef} className="py-24 md:py-32 bg-light-bg relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="decoration-blob decoration-blob-blue absolute -top-40 -left-20 w-[400px] h-[400px]" />
+      <div className="decoration-blob decoration-blob-warm absolute -bottom-32 right-1/4 w-[350px] h-[350px]" />
+      <div className="absolute top-20 right-10 w-36 h-36 dot-pattern-light opacity-30" />
+
+      <div className="mx-auto max-w-[1200px] px-6 relative z-10">
         <div className="text-center mb-16 pricing-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Pricing
           </p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-dark-text leading-tight mb-4">
-            Simpele, transparante prijzen
+            Simpele,{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-accent-blue">transparante</span>
+              <span className="absolute bottom-1 left-0 right-0 h-2 bg-accent-blue/15 -skew-x-3 rounded" />
+            </span>{" "}
+            prijzen
           </h2>
           <p className="text-gray-text text-lg max-w-2xl mx-auto">
             Geen verborgen kosten. Geen lange contracten. Kies het plan dat bij
@@ -117,12 +127,12 @@ export default function Pricing() {
               key={i}
               className={`pricing-card relative rounded-2xl p-8 transition-all hover:shadow-xl hover:-translate-y-1 ${
                 plan.highlighted
-                  ? "bg-primary text-white shadow-2xl shadow-primary/20 md:-mt-4 md:mb-[-1rem] md:py-10"
-                  : "bg-white border border-border"
+                  ? "bg-primary text-white shadow-2xl shadow-primary/20 md:-mt-4 md:mb-[-1rem] md:py-10 border-2 border-accent-blue/30"
+                  : "bg-white border border-border/50 hover:border-accent-blue/20"
               }`}
             >
               {plan.badge && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-orange text-white text-xs font-bold px-4 py-1 rounded-full">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-orange text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg shadow-accent-orange/25">
                   {plan.badge}
                 </span>
               )}

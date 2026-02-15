@@ -13,7 +13,8 @@ const testimonials = [
     name: "Mark de Vries",
     role: "CTO",
     company: "TechScale B.V.",
-    initials: "MV",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    companyLogo: "TS",
   },
   {
     quote:
@@ -21,7 +22,8 @@ const testimonials = [
     name: "Lisa Jansen",
     role: "VP Engineering",
     company: "DataFlow",
-    initials: "LJ",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    companyLogo: "DF",
   },
   {
     quote:
@@ -29,7 +31,8 @@ const testimonials = [
     name: "Thomas Bakker",
     role: "Product Manager",
     company: "ScaleUp.io",
-    initials: "TB",
+    avatar: "https://randomuser.me/api/portraits/men/67.jpg",
+    companyLogo: "SU",
   },
 ];
 
@@ -40,7 +43,7 @@ export default function Testimonials() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".testimonials-heading",
-        { opacity: 0, y: 40 },
+        { opacity: 0.3, y: 40 },
         {
           opacity: 1,
           y: 0,
@@ -53,7 +56,7 @@ export default function Testimonials() {
       gsap.utils.toArray<HTMLElement>(".testimonial-card").forEach((card, i) => {
         gsap.fromTo(
           card,
-          { opacity: 0, y: 40, rotateY: 5 },
+          { opacity: 0.3, y: 40, rotateY: 5 },
           {
             opacity: 1,
             y: 0,
@@ -71,14 +74,24 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 bg-light-bg">
-      <div className="mx-auto max-w-[1200px] px-6">
+    <section ref={sectionRef} className="py-24 md:py-32 bg-cream relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="decoration-blob decoration-blob-warm absolute -top-32 left-1/3 w-[400px] h-[400px]" />
+      <div className="decoration-blob decoration-blob-blue absolute -bottom-40 -right-20 w-[500px] h-[500px]" />
+      <div className="absolute bottom-20 left-8 w-40 h-40 dot-pattern-light opacity-30" />
+
+      <div className="mx-auto max-w-[1200px] px-6 relative z-10">
         <div className="text-center mb-16 testimonials-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Testimonials
           </p>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-dark-text leading-tight mb-4">
-            Wat onze klanten zeggen
+            Wat onze{" "}
+            <span className="relative inline-block">
+              <span className="relative z-10 text-accent-blue">klanten</span>
+              <span className="absolute bottom-1 left-0 right-0 h-2 bg-accent-blue/15 -skew-x-3 rounded" />
+            </span>{" "}
+            zeggen
           </h2>
           <p className="text-gray-text text-lg max-w-2xl mx-auto">
             Ontdek hoe Nederlandse bedrijven hun teams succesvol uitbreiden met
@@ -90,7 +103,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
-              className="testimonial-card bg-white rounded-2xl p-8 border border-border/50 transition-all hover:shadow-xl hover:-translate-y-1"
+              className="testimonial-card bg-white rounded-2xl p-8 border border-border/50 transition-all hover:shadow-xl hover:-translate-y-1 hover:border-accent-blue/20"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-5">
@@ -112,17 +125,24 @@ export default function Testimonials() {
               </blockquote>
 
               <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                {/* Avatar */}
-                <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white text-sm font-bold shrink-0">
-                  {testimonial.initials}
-                </div>
-                <div>
+                {/* Real avatar photo */}
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover border-2 border-border/30 shrink-0"
+                  loading="lazy"
+                />
+                <div className="flex-1">
                   <p className="text-dark-text font-medium text-sm">
                     {testimonial.name}
                   </p>
                   <p className="text-gray-text text-xs">
                     {testimonial.role}, {testimonial.company}
                   </p>
+                </div>
+                {/* Company logo badge */}
+                <div className="w-10 h-10 rounded-lg bg-light-bg flex items-center justify-center text-xs font-bold text-gray-text border border-border/30">
+                  {testimonial.companyLogo}
                 </div>
               </div>
             </div>
