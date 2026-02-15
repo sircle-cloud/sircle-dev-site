@@ -190,28 +190,17 @@ export default function Navbar() {
             Plan een gesprek
           </a>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - modern dot grid */}
           <button
             onClick={() => (mobileOpen ? closeMenu() : openMenu())}
             className="md:hidden relative z-[60] text-white w-10 h-10 flex items-center justify-center"
             aria-label="Menu"
           >
-            <div className="relative w-6 h-5">
-              <span
-                className={`absolute left-0 w-6 h-[2px] bg-white rounded-full transition-all duration-300 ${
-                  mobileOpen ? "top-[9px] rotate-45" : "top-0"
-                }`}
-              />
-              <span
-                className={`absolute left-0 top-[9px] w-6 h-[2px] bg-white rounded-full transition-all duration-300 ${
-                  mobileOpen ? "opacity-0 scale-x-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute left-0 w-6 h-[2px] bg-white rounded-full transition-all duration-300 ${
-                  mobileOpen ? "top-[9px] -rotate-45" : "top-[18px]"
-                }`}
-              />
+            <div className="grid grid-cols-2 gap-[5px]">
+              <span className="w-[5px] h-[5px] bg-white rounded-full" />
+              <span className="w-[5px] h-[5px] bg-white rounded-full" />
+              <span className="w-[5px] h-[5px] bg-white rounded-full" />
+              <span className="w-[5px] h-[5px] bg-white rounded-full" />
             </div>
           </button>
         </div>
@@ -227,6 +216,17 @@ export default function Navbar() {
             clipPath: "circle(0% at calc(100% - 40px) 32px)",
           }}
         >
+          {/* Close button */}
+          <button
+            onClick={closeMenu}
+            className="absolute top-5 right-6 z-10 w-10 h-10 flex items-center justify-center text-white/60 hover:text-white transition-colors"
+            aria-label="Sluiten"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+
           {/* Subtle background elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute top-20 -left-20 w-64 h-64 bg-accent-blue/10 rounded-full blur-[100px]" />
@@ -235,7 +235,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu content */}
-          <div className="relative h-full flex flex-col justify-center px-10">
+          <div className="relative h-full flex flex-col justify-center px-10 pb-24">
             {/* Nav links */}
             <div className="flex flex-col gap-2">
               {navLinks.map((link, i) => (
@@ -260,7 +260,7 @@ export default function Navbar() {
             </div>
 
             {/* Bottom CTA section */}
-            <div ref={ctaRef} className="mt-16 pt-8 border-t border-white/10">
+            <div ref={ctaRef} className="mt-10 pt-6 border-t border-white/10">
               <p className="text-white/40 text-xs uppercase tracking-widest mb-4">
                 Neem contact op
               </p>
