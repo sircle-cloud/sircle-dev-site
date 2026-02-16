@@ -66,7 +66,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={sectionRef}
-      className="relative h-screen min-h-[700px] flex items-center overflow-hidden"
+      className="relative h-screen min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden"
     >
       {/* Background */}
       <div
@@ -104,7 +104,7 @@ export default function Hero() {
       <div className="absolute top-[60%] right-[25%] w-2 h-2 rounded-full bg-accent-warm/40 animate-pulse" style={{ animationDelay: "1s" }} />
       <div className="absolute top-[40%] left-[5%] w-4 h-4 rounded-full bg-soft-green/20 animate-pulse" style={{ animationDelay: "0.5s" }} />
 
-      <div className="relative z-10 mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-32 md:py-40 w-full">
+      <div className="relative z-10 mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 py-24 md:py-40 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text content */}
           <div>
@@ -116,7 +116,7 @@ export default function Hero() {
 
             <h1
               ref={headlineRef}
-              className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-medium text-white leading-[1.05] mb-6"
+              className="font-heading text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-medium text-white leading-[1.05] mb-6"
             >
               Expand your dev team in{" "}
               <span className="relative inline-block">
@@ -160,7 +160,7 @@ export default function Hero() {
             </div>
 
             {/* Trust indicators */}
-            <div className="mt-16 flex flex-wrap items-center gap-8 text-white/50 text-sm">
+            <div className="mt-10 md:mt-16 flex flex-wrap items-center gap-4 md:gap-8 text-white/50 text-sm">
               <div className="flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="text-soft-green">
                   <path d="M8 0L10.12 5.26L16 6.18L11.68 10.14L12.89 16L8 13.26L3.11 16L4.32 10.14L0 6.18L5.88 5.26L8 0Z" />

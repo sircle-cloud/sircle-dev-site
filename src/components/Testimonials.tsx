@@ -80,7 +80,7 @@ export default function Testimonials() {
       <div className="decoration-blob decoration-blob-blue absolute -bottom-40 -right-20 w-[500px] h-[500px]" />
       <div className="absolute bottom-20 left-8 w-40 h-40 dot-pattern-light opacity-30" />
 
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 relative z-10">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16 testimonials-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Testimonials

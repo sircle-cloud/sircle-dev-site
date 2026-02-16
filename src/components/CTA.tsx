@@ -33,7 +33,7 @@ export default function CTA() {
 
   return (
     <section id="contact" ref={sectionRef} className="py-24 md:py-32 bg-cream">
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6">
         <div className="cta-content relative rounded-3xl overflow-hidden">
           {/* Background image */}
           <div className="absolute inset-0">
@@ -78,7 +78,7 @@ export default function CTA() {
           {/* Dot pattern */}
           <div className="absolute top-0 right-0 w-48 h-48 dot-pattern-light opacity-10" />
 
-          <div className="relative z-10 px-8 md:px-16 py-16 md:py-24 text-center">
+          <div className="relative z-10 px-5 sm:px-8 md:px-16 py-12 md:py-24 text-center">
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-medium text-white leading-tight mb-4">
               Klaar om je team{" "}
               <span className="relative inline-block">

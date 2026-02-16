@@ -38,7 +38,7 @@ export default function Footer() {
     <footer className="bg-primary text-white">
       {/* Newsletter section */}
       <div className="border-b border-white/10">
-        <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-12 md:py-16">
+        <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 py-12 md:py-16">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
             <div>
               <a href="#hero" className="flex items-center gap-2 text-white font-heading text-xl font-semibold mb-2">
@@ -59,13 +59,13 @@ export default function Footer() {
               <p className="font-heading text-lg font-medium mb-3">
                 Blijf op de hoogte
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 max-w-full">
                 <input
                   type="email"
                   placeholder="Je email adres"
-                  className="bg-white/10 border border-white/15 text-white placeholder:text-white/40 rounded-full px-5 py-2.5 text-sm w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
+                  className="bg-white/10 border border-white/15 text-white placeholder:text-white/40 rounded-full px-5 py-2.5 text-sm min-w-0 flex-1 md:w-72 md:flex-none focus:outline-none focus:ring-2 focus:ring-accent-blue focus:border-transparent"
                 />
-                <button className="bg-accent-blue hover:bg-accent-blue/90 text-white font-medium px-6 py-2.5 rounded-full text-sm transition-all whitespace-nowrap">
+                <button className="bg-accent-blue hover:bg-accent-blue/90 text-white font-medium px-5 sm:px-6 py-2.5 rounded-full text-sm transition-all whitespace-nowrap shrink-0">
                   Subscribe
                 </button>
               </div>
@@ -75,7 +75,7 @@ export default function Footer() {
       </div>
 
       {/* Links */}
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-12 md:py-16">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Logo column */}
           <div className="col-span-2 md:col-span-1">
@@ -133,7 +133,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
+        <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
           <p className="text-white/40 text-xs">
             &copy; {new Date().getFullYear()} Sircle.dev — Onderdeel van SIRCLE holding. Alle rechten voorbehouden.
           </p>

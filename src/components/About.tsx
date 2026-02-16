@@ -76,7 +76,7 @@ export default function About() {
       {/* Dot pattern top right */}
       <div className="absolute top-16 right-16 w-48 h-48 dot-pattern-light opacity-40" />
 
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 relative z-10">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left: text + image */}
           <div>

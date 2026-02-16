@@ -150,7 +150,7 @@ export default function Navbar() {
             : "bg-transparent py-5"
         }`}
       >
-        <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 flex items-center justify-between">
+        <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <a
             href="#hero"
@@ -235,7 +235,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu content */}
-          <div className="relative h-full flex flex-col justify-start pt-4 px-10 pb-10 overflow-y-auto">
+          <div className="relative h-full flex flex-col justify-start pt-20 px-8 sm:px-10 pb-10 overflow-y-auto">
             {/* Nav links */}
             <div className="flex flex-col gap-2">
               {navLinks.map((link, i) => (

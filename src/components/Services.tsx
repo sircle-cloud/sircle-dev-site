@@ -146,7 +146,7 @@ export default function Services() {
       <div className="decoration-blob decoration-blob-orange absolute -top-32 right-1/4 w-[400px] h-[400px]" />
       <div className="absolute top-32 right-8 w-36 h-36 dot-pattern opacity-20" />
 
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 relative z-10">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16 services-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Services & Technologies

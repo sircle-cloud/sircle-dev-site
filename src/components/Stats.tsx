@@ -126,8 +126,8 @@ export default function Stats() {
       <div className="absolute bottom-10 right-[15%] w-32 h-32 rounded-full border border-white/5" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/[0.03]" />
 
-      <div className="relative z-10 mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      <div className="relative z-10 mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
           {stats.map((stat, i) => (
             <div key={i} className="text-center group">
               {/* Icon */}
@@ -135,7 +135,7 @@ export default function Stats() {
                 {stat.icon}
               </div>
 
-              <div className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 whitespace-nowrap">
+              <div className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
                 <span ref={(el) => { countRefs.current[i] = el; }}>
                   {stat.prefix}0
                 </span>

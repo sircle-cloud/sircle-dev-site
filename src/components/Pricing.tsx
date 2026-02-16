@@ -102,7 +102,7 @@ export default function Pricing() {
       <div className="decoration-blob decoration-blob-warm absolute -bottom-32 right-1/4 w-[350px] h-[350px]" />
       <div className="absolute top-20 right-10 w-36 h-36 dot-pattern-light opacity-30" />
 
-      <div className="mx-auto max-w-[85%] 2xl:max-w-[1400px] px-6 relative z-10">
+      <div className="mx-auto max-w-[92%] md:max-w-[85%] 2xl:max-w-[1400px] px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16 pricing-heading">
           <p className="text-accent-blue font-medium text-sm uppercase tracking-wider mb-4">
             Pricing
@@ -147,7 +147,7 @@ export default function Pricing() {
                 </h3>
                 <div className="flex items-baseline gap-1 mb-3">
                   <span
-                    className={`font-heading text-4xl md:text-5xl font-bold ${
+                    className={`font-heading text-3xl sm:text-4xl md:text-5xl font-bold ${
                       plan.highlighted ? "text-white" : "text-dark-text"
                     }`}
                   >
